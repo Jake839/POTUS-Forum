@@ -1,0 +1,20 @@
+<!-- Question -->
+<%= question.description %> 
+<br>
+
+<!-- Choices Data -->
+<%= form_for :question, as: :choice_id, url: question_choice_url(question, :choice_id), method: :patch do |f| %>
+    <% choices = question.choices.order('votes DESC') %>
+    <% choices.each do |choice| %>
+        <div>
+            <%= f.radio_button :choice_id, choice.id %>
+            <% if choice.votes == 1 %>
+                <%= choice.name %> - <%= choice.votes %> vote
+            <% else %>
+                <%= choice.name %> - <%= choice.votes %> votes
+            <% end %>
+        </div>
+    <% end %>
+    <%= f.submit "Vote" %>
+    <br><br><br><br>
+<% end %>
