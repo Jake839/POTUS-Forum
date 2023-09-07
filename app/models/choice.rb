@@ -17,4 +17,9 @@ class Choice < ApplicationRecord
         self.votes += 1 
         self.save
     end 
+
+    belongs_to :question, 
+        primary_key: :id, 
+        foreign_key: :question_id, #choices table
+        class_name: :Question
 end 

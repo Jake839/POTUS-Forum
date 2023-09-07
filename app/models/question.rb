@@ -15,9 +15,4 @@ class Question < ApplicationRecord
         foreign_key: :question_id, #choices table
         class_name: :Choice, 
         dependent: :destroy
-
-    def self.get_question_choices
-
-
-    end
 end 
