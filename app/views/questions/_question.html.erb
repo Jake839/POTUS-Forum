@@ -1,3 +1,7 @@
+<head>
+    <%= stylesheet_link_tag 'question' %>
+</head>
+
 <!-- Question -->
 <%= question.description %> 
 <br>
@@ -6,12 +10,14 @@
 <% choices = question.choices.order('votes DESC') %>
 <% if cookies[:voted_questions].to_s.include?(question.id.to_s) %>
         <% choices.each do |choice| %>
-            <div>
-                <% if choice.votes == 1 %>
-                    <%= choice.name %> - <%= choice.votes %> vote
-                <% else %>
-                    <%= choice.name %> - <%= choice.votes %> votes
-                <% end %>    
+            <div class="chart-wrap">
+                <div class="grid horizontal">
+                    <% if choice.votes == 1 %>
+                        <%= choice.name %><div class="bar" style="--bar-value:100%" data-name="100%" title="Yes-<%= choice.votes %> vote"></div>
+                    <% else %>
+                        <%= choice.name %><div class="bar" style="--bar-value:30%" data-name="0%" title="No-<%= choice.votes %> votes"></div>
+                    <% end %>   
+                </div>  
             </div>
         <% end %>
         Voted!

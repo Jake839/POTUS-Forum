@@ -68,6 +68,9 @@ group :development do
   gem 'binding_of_caller'
   gem 'byebug'
   gem 'pry-rails'
+  gem 'mini_racer', '~> 0.8.0'
+  gem 'sassc', '~> 2.4'
+  gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
 end
 
 group :test do

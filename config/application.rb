@@ -18,5 +18,8 @@ module PotusForum
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    #Added per ChatGPT on 9/8/23 for implementing LESS CSS
+    config.assets.precompile += %w( application.css )
   end
 end

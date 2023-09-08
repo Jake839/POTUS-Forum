@@ -8655,3 +8655,732 @@ Processing by QuestionsController#index as TURBO_STREAM
 Completed 200 OK in 198ms (Views: 140.2ms | ActiveRecord: 57.3ms | Allocations: 44400)
 
 
+Started GET "/questions" for ::1 at 2023-09-08 13:08:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:8
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:22
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:22
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 36.1ms | Allocations: 14825)
+  Rendered questions/index.html.erb within layouts/application (Duration: 53.3ms | Allocations: 19428)
+  Rendered layout layouts/application.html.erb (Duration: 192.8ms | Allocations: 52761)
+Completed 200 OK in 218ms (Views: 198.3ms | ActiveRecord: 7.3ms | Allocations: 58464)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 13:28:35 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.9ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:8
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:22
+  [1m[36mChoice Load (1.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:22
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 35.9ms | Allocations: 4416)
+  Rendered questions/index.html.erb within layouts/application (Duration: 203.0ms | Allocations: 8208)
+  Rendered layout layouts/application.html.erb (Duration: 220.3ms | Allocations: 10583)
+Completed 200 OK in 253ms (Views: 248.6ms | ActiveRecord: 45.5ms | Allocations: 11401)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 13:30:44 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:8
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:22
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:22
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 21.7ms | Allocations: 4347)
+  Rendered questions/index.html.erb within layouts/application (Duration: 33.9ms | Allocations: 5277)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 7652)
+Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 1.6ms | Allocations: 8469)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 13:35:45 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.8ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:8
+  [1m[36mChoice Load (1.7ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:22
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:22
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 82.8ms | Allocations: 4363)
+  Rendered questions/index.html.erb within layouts/application (Duration: 93.9ms | Allocations: 5287)
+  Rendered layout layouts/application.html.erb (Duration: 101.8ms | Allocations: 7698)
+Completed 200 OK in 114ms (Views: 107.5ms | ActiveRecord: 3.4ms | Allocations: 8509)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 13:36:21 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:8
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:22
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:22
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 11.5ms | Allocations: 4348)
+  Rendered questions/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 5278)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 7679)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 1.2ms | Allocations: 8499)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 13:36:44 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:8
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:22
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:22
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 8.5ms | Allocations: 4388)
+  Rendered questions/index.html.erb within layouts/application (Duration: 19.1ms | Allocations: 5317)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 7692)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 1.1ms | Allocations: 8511)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 13:57:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 34.7ms | Allocations: 15263)
+  Rendered questions/index.html.erb within layouts/application (Duration: 99.5ms | Allocations: 19866)
+  Rendered layout layouts/application.html.erb (Duration: 102.2ms | Allocations: 22577)
+Completed 200 OK in 127ms (Views: 56.5ms | ActiveRecord: 58.8ms | Allocations: 28280)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 13:57:09 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 7.0ms | Allocations: 4065)
+  Rendered questions/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 4811)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 5408)
+Completed 200 OK in 12ms (Views: 8.9ms | ActiveRecord: 1.2ms | Allocations: 5672)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 14:01:10 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 23.6ms | Allocations: 4039)
+  Rendered questions/index.html.erb within layouts/application (Duration: 49.1ms | Allocations: 4783)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | Allocations: 5380)
+Completed 200 OK in 66ms (Views: 53.6ms | ActiveRecord: 2.2ms | Allocations: 5642)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 14:02:43 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (15.1ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 26.2ms | Allocations: 4687)
+  Rendered questions/index.html.erb within layouts/application (Duration: 30.0ms | Allocations: 5611)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 6437)
+Completed 200 OK in 39ms (Views: 22.4ms | ActiveRecord: 15.8ms | Allocations: 7246)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 14:04:02 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 9.5ms | Allocations: 4718)
+  Rendered questions/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 5642)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 6468)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 1.3ms | Allocations: 7278)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 15:01:52 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (12.1ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 39.2ms | Allocations: 4748)
+  Rendered questions/index.html.erb within layouts/application (Duration: 96.7ms | Allocations: 8534)
+  Rendered layout layouts/application.html.erb (Duration: 99.8ms | Allocations: 9360)
+Completed 200 OK in 118ms (Views: 113.4ms | ActiveRecord: 23.8ms | Allocations: 10170)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 15:01:55 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (2.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 82.1ms | Allocations: 4056)
+  Rendered questions/index.html.erb within layouts/application (Duration: 84.8ms | Allocations: 4800)
+  Rendered layout layouts/application.html.erb (Duration: 85.5ms | Allocations: 5397)
+Completed 200 OK in 92ms (Views: 87.9ms | ActiveRecord: 3.1ms | Allocations: 5661)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 15:04:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (12.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 40.5ms | Allocations: 15257)
+  Rendered questions/index.html.erb within layouts/application (Duration: 66.6ms | Allocations: 19860)
+  Rendered layout layouts/application.html.erb (Duration: 70.7ms | Allocations: 22571)
+Completed 200 OK in 96ms (Views: 65.1ms | ActiveRecord: 19.6ms | Allocations: 28274)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 15:17:17 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.9ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 26.2ms | Allocations: 4121)
+  Rendered questions/index.html.erb within layouts/application (Duration: 78.4ms | Allocations: 7728)
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 8325)
+Completed 200 OK in 89ms (Views: 83.2ms | ActiveRecord: 16.4ms | Allocations: 8589)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 15:22:46 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 10.2ms | Allocations: 4711)
+  Rendered questions/index.html.erb within layouts/application (Duration: 25.8ms | Allocations: 5636)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 6462)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 1.5ms | Allocations: 7271)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 15:24:36 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (4.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (1.1ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (3.1ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 16.3ms | Allocations: 4410)
+Started GET "/" for ::1 at 2023-09-08 15:24:37 -0400
+  Rendered questions/index.html.erb within layouts/application (Duration: 970.6ms | Allocations: 5626)
+  Rendered layout layouts/application.html.erb (Duration: 972.2ms | Allocations: 6453)
+Completed 200 OK in 975ms (Views: 965.3ms | ActiveRecord: 8.7ms | Allocations: 6718)
+
+
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (18.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (1.1ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (1.1ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 198.0ms | Allocations: 6171)
+  Rendered questions/index.html.erb within layouts/application (Duration: 231.3ms | Allocations: 7519)
+  Rendered layout layouts/application.html.erb (Duration: 232.2ms | Allocations: 8115)
+Completed 200 OK in 233ms (Views: 211.7ms | ActiveRecord: 21.0ms | Allocations: 8370)
+
+
+Started GET "/" for ::1 at 2023-09-08 15:24:37 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (1.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.9ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 54.2ms | Allocations: 4395)
+  Rendered questions/index.html.erb within layouts/application (Duration: 56.5ms | Allocations: 5134)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 5730)
+Completed 200 OK in 59ms (Views: 54.9ms | ActiveRecord: 3.2ms | Allocations: 5985)
+
+
+Started PATCH "/questions/1/choices/choice_id" for ::1 at 2023-09-08 15:24:42 -0400
+Processing by ChoicesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "question"=>{"choice_id"=>"1"}, "commit"=>"Vote", "question_id"=>"1", "id"=>"choice_id"}
+  [1m[36mChoice Load (1.9ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/choices_controller.rb:3:in `update'
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/choices_controller.rb:8:in `update'
+  [1m[36mTRANSACTION (72.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/choice.rb:19:in `add_vote'
+  [1m[36mChoice Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "choices" WHERE "choices"."name" = $1 AND "choices"."id" != $2 AND "choices"."question_id" = $3 LIMIT $4[0m  [["name", "Yes"], ["id", 1], ["question_id", 1], ["LIMIT", 1]]
+  ↳ app/models/choice.rb:19:in `add_vote'
+  [1m[36mChoice Update (47.0ms)[0m  [1m[33mUPDATE "choices" SET "votes" = $1, "updated_at" = $2 WHERE "choices"."id" = $3[0m  [["votes", 2], ["updated_at", "2023-09-08 19:24:42.879432"], ["id", 1]]
+  ↳ app/models/choice.rb:19:in `add_vote'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/choice.rb:19:in `add_vote'
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 315ms (ActiveRecord: 125.2ms | Allocations: 11542)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 15:24:42 -0400
+Processing by QuestionsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (21.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (2.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (1.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.9ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 23.1ms | Allocations: 4052)
+  Rendered questions/index.html.erb within layouts/application (Duration: 49.1ms | Allocations: 4837)
+  Rendered layout layouts/application.html.erb (Duration: 51.4ms | Allocations: 5434)
+Completed 200 OK in 53ms (Views: 26.1ms | ActiveRecord: 26.2ms | Allocations: 5740)
+
+
+Started GET "/" for ::1 at 2023-09-08 15:26:05 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (1.8ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 34.2ms | Allocations: 4394)
+  Rendered questions/index.html.erb within layouts/application (Duration: 85.0ms | Allocations: 5133)
+  Rendered layout layouts/application.html.erb (Duration: 86.6ms | Allocations: 5729)
+Completed 200 OK in 95ms (Views: 87.3ms | ActiveRecord: 3.4ms | Allocations: 5984)
+
+
+Started GET "/" for ::1 at 2023-09-08 15:26:06 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 18.6ms | Allocations: 4394)
+  Rendered questions/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 5133)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 5729)
+Completed 200 OK in 32ms (Views: 28.4ms | ActiveRecord: 1.4ms | Allocations: 5985)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 15:26:07 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (1.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 14.7ms | Allocations: 4058)
+  Rendered questions/index.html.erb within layouts/application (Duration: 44.6ms | Allocations: 4797)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 5393)
+Completed 200 OK in 48ms (Views: 45.0ms | ActiveRecord: 2.1ms | Allocations: 5648)
+
+
+Started GET "/" for ::1 at 2023-09-08 15:28:30 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (5.8ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (9.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (7.7ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 36.1ms | Allocations: 4077)
+  Rendered questions/index.html.erb within layouts/application (Duration: 453.8ms | Allocations: 4822)
+  Rendered layout layouts/application.html.erb (Duration: 455.4ms | Allocations: 5419)
+Completed 200 OK in 458ms (Views: 432.4ms | ActiveRecord: 23.8ms | Allocations: 5681)
+
+
+Started GET "/" for ::1 at 2023-09-08 15:30:13 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.7ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (56.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 71.1ms | Allocations: 4066)
+  Rendered questions/index.html.erb within layouts/application (Duration: 75.6ms | Allocations: 4805)
+  Rendered layout layouts/application.html.erb (Duration: 76.3ms | Allocations: 5401)
+Completed 200 OK in 86ms (Views: 24.6ms | ActiveRecord: 58.1ms | Allocations: 5658)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 16:01:17 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (1.0ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (11.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 54.0ms | Allocations: 4114)
+  Rendered questions/index.html.erb within layouts/application (Duration: 399.7ms | Allocations: 7702)
+  Rendered layout layouts/application.html.erb (Duration: 401.8ms | Allocations: 8298)
+Completed 200 OK in 411ms (Views: 406.4ms | ActiveRecord: 237.4ms | Allocations: 8555)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 16:01:21 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (35.1ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.7ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 54.7ms | Allocations: 4079)
+  Rendered questions/index.html.erb within layouts/application (Duration: 59.7ms | Allocations: 4818)
+  Rendered layout layouts/application.html.erb (Duration: 61.9ms | Allocations: 5414)
+Completed 200 OK in 64ms (Views: 25.9ms | ActiveRecord: 36.5ms | Allocations: 5669)
+
+
+Started GET "/" for ::1 at 2023-09-08 16:01:22 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (5.7ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (4.1ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 37.1ms | Allocations: 4058)
+  Rendered questions/index.html.erb within layouts/application (Duration: 42.7ms | Allocations: 4797)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 5393)
+Completed 200 OK in 46ms (Views: 34.0ms | ActiveRecord: 10.6ms | Allocations: 5649)
+
+
+Started GET "/" for ::1 at 2023-09-08 16:02:25 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 56.9ms | Allocations: 4726)
+  Rendered questions/index.html.erb within layouts/application (Duration: 72.5ms | Allocations: 5655)
+  Rendered layout layouts/application.html.erb (Duration: 81.6ms | Allocations: 6481)
+Completed 200 OK in 174ms (Views: 140.9ms | ActiveRecord: 1.2ms | Allocations: 7293)
+
+
+Started GET "/" for ::1 at 2023-09-08 16:14:38 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (1.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (14.0ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 72.1ms | Allocations: 4110)
+  Rendered questions/index.html.erb within layouts/application (Duration: 733.4ms | Allocations: 7644)
+  Rendered layout layouts/application.html.erb (Duration: 737.3ms | Allocations: 8240)
+Completed 200 OK in 755ms (Views: 745.6ms | ActiveRecord: 47.1ms | Allocations: 8496)
+
+
+Started GET "/" for ::1 at 2023-09-08 16:22:51 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (1.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.7ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 58.8ms | Allocations: 4120)
+  Rendered questions/index.html.erb within layouts/application (Duration: 252.2ms | Allocations: 7653)
+  Rendered layout layouts/application.html.erb (Duration: 254.5ms | Allocations: 8249)
+Completed 200 OK in 262ms (Views: 258.0ms | ActiveRecord: 77.5ms | Allocations: 8504)
+
+
+Started GET "/" for ::1 at 2023-09-08 16:23:08 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (1.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.8ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (2.9ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 124.8ms | Allocations: 4063)
+  Rendered questions/index.html.erb within layouts/application (Duration: 129.0ms | Allocations: 4802)
+  Rendered layout layouts/application.html.erb (Duration: 131.4ms | Allocations: 5398)
+Completed 200 OK in 133ms (Views: 127.0ms | ActiveRecord: 5.5ms | Allocations: 5654)
+
+
+Started GET "/" for ::1 at 2023-09-08 17:27:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (49.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (1.1ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 44.6ms | Allocations: 15262)
+  Rendered questions/index.html.erb within layouts/application (Duration: 114.6ms | Allocations: 19865)
+  Rendered layout layouts/application.html.erb (Duration: 121.9ms | Allocations: 22574)
+Completed 200 OK in 154ms (Views: 71.8ms | ActiveRecord: 67.4ms | Allocations: 28277)
+
+
+Started GET "/" for ::1 at 2023-09-08 17:28:54 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.7ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 107.5ms | Allocations: 15252)
+  Rendered questions/index.html.erb within layouts/application (Duration: 125.6ms | Allocations: 19861)
+  Rendered layout layouts/application.html.erb (Duration: 128.9ms | Allocations: 22573)
+Completed 200 OK in 160ms (Views: 135.6ms | ActiveRecord: 9.4ms | Allocations: 28277)
+
+
+Started GET "/" for ::1 at 2023-09-08 17:29:33 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.7ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 113.3ms | Allocations: 15269)
+  Rendered questions/index.html.erb within layouts/application (Duration: 131.0ms | Allocations: 19872)
+  Rendered layout layouts/application.html.erb (Duration: 135.4ms | Allocations: 22584)
+Completed 200 OK in 165ms (Views: 139.4ms | ActiveRecord: 9.8ms | Allocations: 28288)
+
+
+Started GET "/" for ::1 at 2023-09-08 17:30:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 57.1ms | Allocations: 15251)
+  Rendered questions/index.html.erb within layouts/application (Duration: 74.3ms | Allocations: 19854)
+  Rendered layout layouts/application.html.erb (Duration: 120.6ms | Allocations: 22571)
+Completed 200 OK in 151ms (Views: 125.2ms | ActiveRecord: 13.7ms | Allocations: 28275)
+
+
+Started GET "/" for ::1 at 2023-09-08 17:30:49 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (1.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:26
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 16.4ms | Allocations: 4070)
+  Rendered questions/index.html.erb within layouts/application (Duration: 23.2ms | Allocations: 4816)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 5413)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 3.2ms | Allocations: 5677)
+
+
+Started PATCH "/questions/2/choices/choice_id" for ::1 at 2023-09-08 17:30:54 -0400
+Processing by ChoicesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "question"=>{"choice_id"=>"5"}, "commit"=>"Vote", "question_id"=>"2", "id"=>"choice_id"}
+  [1m[36mChoice Load (0.8ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/choices_controller.rb:3:in `update'
+  [1m[36mQuestion Load (36.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/choices_controller.rb:8:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/choice.rb:19:in `add_vote'
+  [1m[36mChoice Exists? (2.4ms)[0m  [1m[34mSELECT 1 AS one FROM "choices" WHERE "choices"."name" = $1 AND "choices"."id" != $2 AND "choices"."question_id" = $3 LIMIT $4[0m  [["name", "Sarah Huckabee Sanders"], ["id", 5], ["question_id", 2], ["LIMIT", 1]]
+  ↳ app/models/choice.rb:19:in `add_vote'
+  [1m[36mChoice Update (9.2ms)[0m  [1m[33mUPDATE "choices" SET "votes" = $1, "updated_at" = $2 WHERE "choices"."id" = $3[0m  [["votes", 1], ["updated_at", "2023-09-08 21:30:55.025186"], ["id", 5]]
+  ↳ app/models/choice.rb:19:in `add_vote'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/choice.rb:19:in `add_vote'
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 186ms (ActiveRecord: 51.1ms | Allocations: 11561)
+
+
+Started GET "/questions" for ::1 at 2023-09-08 17:30:55 -0400
+Processing by QuestionsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:12
+  [1m[36mChoice Load (0.6ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:26
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 7.8ms | Allocations: 3449)
+  Rendered questions/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4234)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4831)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 1.3ms | Allocations: 5136)
+
+
