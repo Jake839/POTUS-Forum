@@ -17,16 +17,16 @@ question3 = Question.create(description: "Is Joe Biden a good president?")
 puts "Loading Choices..."
 Choice.destroy_all 
 #Question 1 Choices
-choice1 = Choice.create(name: "Yes", votes: 0, question_id: question1.id)
-choice2 = Choice.create(name: "No", votes: 0, question_id: question1.id)
+choice1 = Choice.create(name: "Yes", votes: 0, bar_color: "red", question_id: question1.id)
+choice2 = Choice.create(name: "No", votes: 0, bar_color: "blue", question_id: question1.id)
 #Question 2 Choices
-choice3 = Choice.create(name: "Kari Lake", votes: 0, question_id: question2.id)
-choice4 = Choice.create(name: "Marjorie Taylor Greene", votes: 0, question_id: question2.id)
-choice5 = Choice.create(name: "Sarah Huckabee Sanders", votes: 0, question_id: question2.id)
-choice6 = Choice.create(name: "Sarah Palin", votes: 0, question_id: question2.id)
+choice3 = Choice.create(name: "Kari Lake", bar_color: "red", votes: 0, question_id: question2.id)
+choice4 = Choice.create(name: "Marjorie Taylor Greene", bar_color: "black", votes: 0, question_id: question2.id)
+choice5 = Choice.create(name: "Sarah Huckabee Sanders", bar_color: "brown", votes: 0, question_id: question2.id)
+choice6 = Choice.create(name: "Sarah Palin", votes: 0, bar_color: "orange", question_id: question2.id)
 #Question 3 Choices
-choice7 = Choice.create(name: "Yes", votes: 0, question_id: question3.id)
-choice8 = Choice.create(name: "No", votes: 0, question_id: question3.id)
+choice7 = Choice.create(name: "Yes", votes: 0, bar_color: "blue", question_id: question3.id)
+choice8 = Choice.create(name: "No", votes: 0, bar_color: "red", question_id: question3.id)
 
 
 
