@@ -10,14 +10,14 @@
 <% choices = question.choices.order('votes DESC') %>
 <% if cookies[:voted_questions].to_s.include?(question.id.to_s) %>
         <% choices_graph_data = {} %>
-        <% choice_bar_colors = [] %>
+        <% choices_bar_colors = [] %>
         <% choices.each do |choice| %>
             <% choices_graph_data[choice.name] = choice.vote_percentage(question.total_votes) %>
-            <% choice_bar_colors << choice.bar_color %>
+            <% choices_bar_colors << choice.bar_color %>
         <% end %>
         <!-- vote results chart -->
         <div style="width: 500px">
-            <%= bar_chart(choices_graph_data, colors: choice_bar_colors) %>
+            <%= bar_chart(choices_graph_data, colors: choices_bar_colors) %>
             Voted!
         </div>
 <% else %>

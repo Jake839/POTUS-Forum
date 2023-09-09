@@ -13023,3 +13023,59 @@ Processing by QuestionsController#index as TURBO_STREAM
 Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 1.5ms | Allocations: 7748)
 
 
+Started GET "/questions" for ::1 at 2023-09-09 18:16:47 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (26.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.9ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:14
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1[0m  [["question_id", 1]]
+  ↳ app/models/question.rb:21:in `total_votes'
+Started GET "/questions" for ::1 at 2023-09-09 18:18:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (0.5ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:14
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1[0m  [["question_id", 1]]
+  ↳ app/models/question.rb:21:in `total_votes'
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:25
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:14
+  [1m[36mChoice Load (0.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1[0m  [["question_id", 3]]
+  ↳ app/models/question.rb:21:in `total_votes'
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 43.5ms | Allocations: 18440)
+  Rendered questions/index.html.erb within layouts/application (Duration: 61.4ms | Allocations: 23044)
+  Rendered layout layouts/application.html.erb (Duration: 140.5ms | Allocations: 50159)
+Completed 200 OK in 165ms (Views: 146.5ms | ActiveRecord: 7.4ms | Allocations: 55873)
+
+
+Started GET "/questions" for ::1 at 2023-09-09 18:20:47 -0400
+Processing by QuestionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering questions/index.html.erb within layouts/application
+  [1m[36mQuestion Load (13.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/views/questions/index.html.erb:2
+  [1m[36mChoice Load (3.2ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 1]]
+  ↳ app/views/questions/_question.html.erb:14
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1[0m  [["question_id", 1]]
+  ↳ app/models/question.rb:21:in `total_votes'
+  [1m[36mChoice Load (0.4ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 2]]
+  ↳ app/views/questions/_question.html.erb:25
+  [1m[36mChoice Load (0.3ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1 ORDER BY votes DESC[0m  [["question_id", 3]]
+  ↳ app/views/questions/_question.html.erb:14
+  [1m[36mChoice Load (0.8ms)[0m  [1m[34mSELECT "choices".* FROM "choices" WHERE "choices"."question_id" = $1[0m  [["question_id", 3]]
+  ↳ app/models/question.rb:21:in `total_votes'
+  Rendered collection of questions/_question.html.erb [3 times] (Duration: 20.4ms | Allocations: 5211)
+  Rendered questions/index.html.erb within layouts/application (Duration: 49.8ms | Allocations: 5957)
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 7431)
+Completed 200 OK in 60ms (Views: 39.3ms | ActiveRecord: 18.2ms | Allocations: 7695)
+
+
