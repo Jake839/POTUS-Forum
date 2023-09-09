@@ -1,5 +1,5 @@
 <head>
-    <%= stylesheet_link_tag 'question' %>
+     <%= stylesheet_link_tag 'question' %>
 </head>
 
 <!-- Question -->
@@ -9,27 +9,26 @@
 <!-- Choices Data -->
 <% choices = question.choices.order('votes DESC') %>
 <% if cookies[:voted_questions].to_s.include?(question.id.to_s) %>
+        <% choices_graph_data = {} %>
+        <% choice_bar_colors = [] %>
         <% choices.each do |choice| %>
-            <div class="chart-wrap">
-                <div class="grid horizontal">
-                    <% if choice.votes == 1 %>
-                        <%= choice.name %><div class="bar" style="--bar-value:100%" data-name="100%" title="Yes-<%= choice.votes %> vote"></div>
-                    <% else %>
-                        <%= choice.name %><div class="bar" style="--bar-value:30%" data-name="0%" title="No-<%= choice.votes %> votes"></div>
-                    <% end %>   
-                </div>  
-            </div>
+            <% choices_graph_data[choice.name] = choice.vote_percentage(question.total_votes) %>
+            <% choice_bar_colors << choice.bar_color %>
         <% end %>
-        Voted!
+        <!-- vote results chart -->
+        <div style="width: 500px">
+            <%= bar_chart(choices_graph_data, colors: choice_bar_colors) %>
+            Voted!
+        </div>
 <% else %>
     <%= form_for :question, as: :choice_id, url: question_choice_url(question, :choice_id), method: :patch do |f| %>
         <% choices.each do |choice| %>
             <div>
                 <%= f.radio_button :choice_id, choice.id %>
                 <% if choice.votes == 1 %>
-                    <%= choice.name %> - <%= choice.votes %> vote
+                    <%= choice.name %> 
                 <% else %>
-                    <%= choice.name %> - <%= choice.votes %> votes
+                    <%= choice.name %> 
                 <% end %>
             </div>
         <% end %>
@@ -37,4 +36,3 @@
     <% end %>
 <% end %>
 <br><br><br><br>
-

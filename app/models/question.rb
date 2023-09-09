@@ -15,4 +15,10 @@ class Question < ApplicationRecord
         foreign_key: :question_id, #choices table
         class_name: :Choice, 
         dependent: :destroy
+
+    def total_votes
+        vote_sum = 0 
+        choices.each { |choice| vote_sum += choice.votes }
+        vote_sum 
+    end 
 end 
