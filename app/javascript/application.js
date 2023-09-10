@@ -5,3 +5,6 @@ import "controllers"
 // For chartkick.com
 import "chartkick"
 import "Chart.bundle"
+
+
+
