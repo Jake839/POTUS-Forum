@@ -1,9 +1,11 @@
 <head>
+    <!-- <%= stylesheet_link_tag 'question' %> --> 
     <%= stylesheet_link_tag 'question' %>
+
 </head>
 
 <!-- Question -->
-<h2><%= question.description %></h2>
+<h2 class="question"><%= question.description %></h2>
 
 <!-- Choices Data -->
 <% choices = question.choices.order('votes DESC') %>
@@ -16,20 +18,16 @@
         <% end %>
         <!-- vote results chart -->
         <div style="width: 750px">
-            <% #debugger %>
             <%= bar_chart(choices_graph_data, xtitle: "Percent of Votes", colors: choices_bar_colors, library: {backgroundColor: "#EFF4F5"}) %>
-            <h2>Voted!<h2>
+            <%= image_tag("Vote Icon.png", size: "30x30") %> 
+            <b style="font-size: 19px; position: relative; top: -8px; left: 1px;">Voted!</b>
         </div>
 <% else %>
     <%= form_for :question, as: :choice_id, url: question_choice_url(question, :choice_id), method: :patch do |f| %>
         <% choices.each do |choice| %>
-            <div>
-                <%= f.radio_button :choice_id, choice.id %>
-                <% if choice.votes == 1 %>
-                    <%= choice.name %> 
-                <% else %>
-                    <%= choice.name %> 
-                <% end %>
+            <div style="position: relative; top: -15px;">
+                <%= f.radio_button :choice_id, choice.id %>      
+                <%= choice.name %> 
             </div>
         <% end %>
         <%= f.submit "Vote" %>
