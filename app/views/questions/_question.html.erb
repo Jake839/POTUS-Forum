@@ -1,11 +1,9 @@
 <head>
-    <!-- <%= stylesheet_link_tag 'question' %> --> 
     <%= stylesheet_link_tag 'question' %>
-
 </head>
 
 <!-- Question -->
-<h2 class="question"><%= question.description %></h2>
+<h2><%= question.description %></h2>
 
 <!-- Choices Data -->
 <% choices = question.choices.order('votes DESC') %>
