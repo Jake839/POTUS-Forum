@@ -8,15 +8,12 @@
 <!-- Choices Data -->
 <% choices = question.choices.order('votes DESC') %>
 <% if cookies[:voted_questions].to_s.include?(question.id.to_s) %>
-        <% choices_graph_data = {} %>
-        <% choices_bar_colors = [] %>
-        <% choices.each do |choice| %>
-            <% choices_graph_data[choice.name] = choice.vote_percentage(question.total_votes) %>
-            <% choices_bar_colors << choice.bar_color %>
-        <% end %>
         <!-- vote results chart -->
         <div style="width: 750px">
-            <%= bar_chart(choices_graph_data, xtitle: "Percent of Votes", colors: choices_bar_colors, library: {backgroundColor: "#EFF4F5"}) %>
+            <% #debugger %>
+            <%= bar_chart choices.map { |choice| 
+                {name: choice.name, data: {choice.name => choice.vote_percentage(question.total_votes).to_f}, color: choice.bar_color, xtitle: "Percent of Votes"}
+            } %>
             <%= image_tag("Vote Icon.png", size: "30x30") %> 
             <b style="font-size: 19px; position: relative; top: -8px; left: 1px;">Voted!</b>
         </div>
