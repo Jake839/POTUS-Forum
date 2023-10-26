@@ -6,5 +6,6 @@ import "controllers"
 import "chartkick"
 import "Chart.bundle"
 
-
+//Globally disable Turbo for forms 
+Turbo.setFormMode("off")
 

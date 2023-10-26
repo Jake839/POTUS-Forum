@@ -2,3 +2,13 @@ h2 {
     font-family: sans-serif;
     color: navy;
 }
+
+.submit_button {
+    color: white;
+    background-color: rgb(244, 4, 4);
+    font-weight: 850;
+    border-color: blue;
+    border-style: outset;
+    border-width: medium;
+    border-radius: 5px;
+}
