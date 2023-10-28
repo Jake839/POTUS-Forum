@@ -20,10 +20,12 @@
 <% else %>
     <%= form_for :question, as: :choice_id, url: question_choice_url(question, :choice_id), method: :patch do |f| %>
         <% choices.each do |choice| %>
-            <div style="position: relative; top: -15px;">
-                <%= f.radio_button :choice_id, choice.id %>      
-                <%= choice.name %> 
-            </div>
+            <label>
+                <div style="position: relative; top: -15px;">
+                    <%= f.radio_button :choice_id, choice.id, :class => "radio_button" %>      
+                    <span><%= choice.name %></span>
+                </div>
+            </label>
         <% end %>
         <%= f.submit "Vote!", :class => "submit_button" %>
     <% end %>

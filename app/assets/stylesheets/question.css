@@ -3,6 +3,34 @@ h2 {
     color: navy;
 }
 
+.radio_button {
+    display: none;
+}
+
+
+.radio_button+*::before {
+    content: "";
+    display: inline-block; 
+    vertical-align: bottom;
+    width: .91rem;
+    height: .91rem;
+    margin-right: 0.3rem;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: gray;
+}
+
+
+.radio_button:checked+*::before {
+    background: radial-gradient(rgb(224, 10, 10) 0%, rgb(224, 10, 10) 40%, transparent 50%, transparent);
+    border-color: red;
+}
+
+.radio_button:checked+* {
+    color: rgb(224, 10, 10);
+}
+
 .submit_button {
     color: white;
     background-color: rgb(244, 4, 4);
