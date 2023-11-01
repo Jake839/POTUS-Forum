@@ -7,12 +7,16 @@
 
 <!-- Choices Data -->
 <% choices = question.choices.order('votes DESC') %>
+<% chart_data = [] %>
+<% choice_colors = [] %>
+<% choices.each { |choice| 
+    choice_colors << choice.bar_color
+    chart_data << [choice.name, choice.vote_percentage(question.total_votes).to_f]
+} %>
 <% if cookies[:voted_questions].to_s.include?(question.id.to_s) %>
         <!-- vote results chart -->
         <div style="width: 750px">
-            <%= bar_chart choices.map { |choice| 
-                {name: choice.name, data: {choice.name => choice.vote_percentage(question.total_votes).to_f}, color: choice.bar_color}
-            } %>
+            <%= pie_chart chart_data, colors: choice_colors, title: "Percent of Votes" %>
             <%= image_tag("Vote Icon.png", size: "30x30") %> 
             <b style="font-size: 19px; position: relative; top: -8px; left: 1px;">Voted!</b>
         </div>
