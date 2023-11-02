@@ -6,23 +6,17 @@
 <h2><%= question.description %></h2>
 
 <!-- Choices Data -->
-<% choices = question.choices.order('votes DESC') %>
-<% chart_data = [] %>
-<% choice_colors = [] %>
-<% choices.each { |choice| 
-    choice_colors << choice.bar_color
-    chart_data << [choice.name, choice.vote_percentage(question.total_votes).to_f]
-} %>
+<% presenter = QuestionPresenter.new(question) %>
 <% if cookies[:voted_questions].to_s.include?(question.id.to_s) %>
         <!-- vote results chart -->
         <div style="width: 750px">
-            <%= pie_chart chart_data, colors: choice_colors, title: "Percent of Votes" %>
+            <%= pie_chart presenter.chart_data, colors: presenter.choice_colors, title: "Percent of Votes" %>
             <%= image_tag("Vote Icon.png", size: "30x30") %> 
             <b style="font-size: 19px; position: relative; top: -8px; left: 1px;">Voted!</b>
         </div>
 <% else %>
     <%= form_for :question, as: :choice_id, url: question_choice_url(question, :choice_id), method: :patch do |f| %>
-        <% choices.each do |choice| %>
+        <% presenter.choices.each do |choice| %>
             <label>
                 <div style="position: relative; top: -15px;">
                     <%= f.radio_button :choice_id, choice.id, :class => "radio_button" %>      
