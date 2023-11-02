@@ -3,6 +3,10 @@ fieldset {
     max-width: 1000px;
 }
 
+.pie_chart {
+    width: 750px;
+}
+
 .question {
     font-family: sans-serif;
     color: navy;
@@ -33,6 +37,11 @@ fieldset {
 
 .radio_button:checked+* {
     color: rgb(224, 10, 10);
+}
+
+.radio_button_div {
+    position: relative; 
+    top: -15px;
 }
 
 .submit_button {
@@ -69,4 +78,25 @@ fieldset {
     position: relative; 
     top: -8px; 
     left: 1px;
+}
+
+/* Styles for smaller screens (e.g., tablets and phones) */
+@media (max-width: 768px) {
+    fieldset {
+        margin: 30px;
+        /* Reduce margin for smaller screens */
+    }
+
+    .pie_chart {
+        width: 100%;
+        /* Make the pie chart container full width */
+    }
+
+    .vote_count {
+        position: relative;
+        top: 0;
+        left: 0;
+        font-size: small;
+        /* Adjust font size for smaller screens */
+    }
 }
