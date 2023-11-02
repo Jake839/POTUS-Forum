@@ -10,9 +10,9 @@ require 'open-uri' #for active storage
 
 puts "Loading Questions..."
 Question.destroy_all 
-question1 = Question.create(description: "Will Donald Trump be elected president in 2024?")
-question2 = Question.create(description: "Who should be Donald Trump's running mate?")
-question3 = Question.create(description: "Is Joe Biden a good president?")
+question1 = Question.create(description: "Will Donald Trump be elected president in 2024?", date_string: "Monday, October 2nd, 2023", numerical_date: 1022023)
+question2 = Question.create(description: "Who should be Donald Trump's running mate?", date_string: "Tuesday, October 3rd, 2023", numerical_date: 1032023)
+question3 = Question.create(description: "Is Joe Biden a good president?", date_string: "Wednesday, October 4th, 2023", numerical_date: 1042023)
 
 puts "Loading Choices..."
 Choice.destroy_all 

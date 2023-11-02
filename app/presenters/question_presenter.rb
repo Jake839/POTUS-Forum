@@ -3,20 +3,32 @@ class QuestionPresenter
         @question = question
     end 
 
-    def choices 
+    def question_date
+        @question.date_string
+    end 
+
+    def question_description
+        @question.description
+    end 
+
+    def choices_for_question_prompt
+        @question.choices.order('id ASC')
+    end 
+
+    def choices_by_vote_count
         @question.choices.order('votes DESC')
     end 
 
     def choice_colors 
-        choices.map(&:bar_color)
+        choices_by_vote_count.map(&:bar_color)
     end 
 
     def chart_data 
-        choices.map { |choice| [choice.name, choice.vote_percentage(@question.total_votes).to_f] }
+        choices_by_vote_count.map { |choice| [choice.name, choice.vote_percentage(@question.total_votes).to_f] }
     end  
 
     def choice_votes 
-        choices.map { |choice| [choice.name, choice.votes, choice.bar_color] }
+        choices_by_vote_count.map { |choice| [choice.name, choice.votes, choice.bar_color] }
     end 
 
     def total_votes

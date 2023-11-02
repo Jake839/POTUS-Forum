@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_09_08_084934) do
+ActiveRecord::Schema[7.0].define(version: 2023_11_02_105025) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -56,7 +56,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_09_08_084934) do
     t.text "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["created_at"], name: "index_questions_on_created_at"
+    t.string "date_string", default: "", null: false
+    t.integer "numerical_date", default: 0, null: false
+    t.index ["numerical_date"], name: "index_questions_on_numerical_date"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

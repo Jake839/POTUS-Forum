@@ -11,16 +11,18 @@ Turbo.setFormMode("off")
 
 //Prevent user from voting for a question without selecting a choice. Added per ChatGPT 11/2/23. 
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('vote-form');
-    const voteButton = document.getElementById('vote-button');
+    const voteForms = document.querySelectorAll('[data-question-id]');
 
-    form.addEventListener('submit', function (event) {
-        const selectedChoice = form.querySelector('input[name="question[choice_id]"]:checked');
+    voteForms.forEach(form => {
+        form.addEventListener('submit', function (event) {
+            const selectedChoice = form.querySelector('input[name="question[choice_id]"]:checked');
 
-        if (!selectedChoice) {
-            alert("Please select an answer choice before voting.");
-            event.preventDefault(); // Prevent form submission
-        }
+            if (!selectedChoice) {
+                const questionId = form.dataset.questionId;
+                alert("Please select an answer choice before voting.");
+                event.preventDefault(); // Prevent form submission
+            }
+        });
     });
 });
 
