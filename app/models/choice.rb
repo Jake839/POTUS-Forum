@@ -21,7 +21,7 @@ class Choice < ApplicationRecord
 
     def add_vote 
         self.votes += 1 
-        self.save
+        self.save!
     end 
 
     def vote_percentage_format(vote_percentage)

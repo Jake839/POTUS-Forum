@@ -40,3 +40,17 @@ h2 {
     border-width: medium;
     border-radius: 5px;
 }
+
+.vote_count {
+    position: relative;
+    top: -240px;
+    left: 670px; 
+    font-size: medium;
+}
+
+.voted_msg {
+    font-size: 19px; 
+    position: relative; 
+    top: -8px; 
+    left: 1px;
+}

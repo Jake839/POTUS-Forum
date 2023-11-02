@@ -13,5 +13,13 @@ class QuestionPresenter
 
     def chart_data 
         choices.map { |choice| [choice.name, choice.vote_percentage(@question.total_votes).to_f] }
-    end     
+    end  
+
+    def choice_votes 
+        choices.map { |choice| [choice.name, choice.votes, choice.bar_color] }
+    end 
+
+    def total_votes
+        @question.total_votes
+    end 
 end 

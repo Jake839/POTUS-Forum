@@ -8,14 +8,26 @@
 <!-- Choices Data -->
 <% presenter = QuestionPresenter.new(question) %>
 <% if cookies[:voted_questions].to_s.include?(question.id.to_s) %>
-        <!-- vote results chart -->
-        <div style="width: 750px">
-            <%= pie_chart presenter.chart_data, colors: presenter.choice_colors, title: "Percent of Votes" %>
-            <%= image_tag("Vote Icon.png", size: "30x30") %> 
-            <b style="font-size: 19px; position: relative; top: -8px; left: 1px;">Voted!</b>
-        </div>
+    <!-- vote results chart -->
+    <div style="width: 750px">
+        <%= pie_chart presenter.chart_data, colors: presenter.choice_colors, title: "Percent of Votes" %>
+        <%= image_tag("Vote Icon.png", size: "30x30") %> 
+        <b class="voted_msg">Voted!</b>
+    </div>
+    <div class="vote_count">
+        <b><%= "Vote Count" %></b>
+        <br>
+        <% presenter.choice_votes.each do |choice_vote_data| %>
+            <span style="color: <%= choice_vote_data[2] %>;">
+                <%= "#{choice_vote_data[0]} - #{choice_vote_data[1].to_s} " %>
+                <%= choice_vote_data[1] == 1 ? "vote" : "votes" %>
+            </span>
+            <br>
+        <% end %>
+        <i><%= "Total - #{presenter.total_votes}" %> <%= presenter.total_votes == 1 ? "vote" : "votes" %></i>
+    </div>
 <% else %>
-    <%= form_for :question, as: :choice_id, url: question_choice_url(question, :choice_id), method: :patch do |f| %>
+    <%= form_for :question, as: :choice_id, url: question_choice_url(question, :choice_id), method: :patch, html: { id: 'vote-form' } do |f| %>
         <% presenter.choices.each do |choice| %>
             <label>
                 <div style="position: relative; top: -15px;">
@@ -24,10 +36,9 @@
                 </div>
             </label>
         <% end %>
-        <%= f.submit "Vote!", :class => "submit_button" %>
+        <%= f.submit "Vote!", :class => "submit_button", id: "vote-button" %>
     <% end %>
 <% end %>
 <br><br><br><br>
-
 
 
