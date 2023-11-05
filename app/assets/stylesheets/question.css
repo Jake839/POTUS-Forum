@@ -29,7 +29,7 @@
 .contact {
     position: relative;
     bottom: 0;
-    left: 1228px;
+    left: 1227px;
     color: blue;
     z-index: 1;
 }
@@ -37,7 +37,7 @@
 .copyright {
     position: relative;
     bottom: 0;
-    left: 546px;
+    left: 86px;
     color: black;
     z-index: 1;
 }
@@ -194,20 +194,50 @@ fieldset {
     left: 1px;
 }
 
+
 /* Styles for smaller screens (e.g., tablets and phones) */
-@media (max-width: 768px) {
-    fieldset {
-        margin: 30px; /* Reduce margin for smaller screens */
+@media (max-width: 850px) {
+    .menu {
+        width: 100%; 
     }
 
+    .contact {
+        position: relative;
+        bottom: 0;
+        left: 446px;
+        color: blue;
+        z-index: 1;
+    }
+
+    .copyright {
+        position: relative;
+        bottom: 0;
+        left: 86px;
+        color: black;
+        z-index: 1;
+    }
+
+    .logo_fb {
+        position: fixed;
+        top: 48px;
+        left: 394px;
+        z-index: 1;
+    }
+
+    .logo_yt {
+        position: fixed;
+        top: 42px;
+        left: 433px;
+        z-index: 1;
+    }
     .pie_chart {
-        width: 100%; /* Make the pie chart container full width */
+        width: 325px;
     }
 
     .vote_count {
         position: relative;
-        top: 0;
-        left: 0;
-        font-size: small; /* Adjust font size for smaller screens */
+        top: 0px;
+        left: 35px;
+        font-size: medium;
     }
 }
