@@ -2,7 +2,7 @@
     <%= stylesheet_link_tag 'question' %>
 </head>
 
-<!-- set presenter -->
+<!-- set the presenter -->
 <% presenter = QuestionPresenter.new(question) %>
 
 <fieldset>
@@ -22,7 +22,7 @@
             <%= image_tag("Vote Icon.png", size: "30x30") %> 
             <b class="voted_msg">Voted!</b>
         </div>
-
+        <!-- vote count data -->
         <div class="vote_count">
             <b><%= "Vote Count" %></b>
             <br>
@@ -49,6 +49,3 @@
         <% end %>
     <% end %>
 </fieldset>
-
-
-

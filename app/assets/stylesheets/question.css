@@ -1,6 +1,94 @@
+.about {
+    position: relative;
+    bottom: 0;
+    left: 131px;
+    color: blue;
+    z-index: 1;
+}
+
+.ad_space_left {
+    position: fixed;
+    top: 0; /* Position at the top of the viewport */
+    width: 128px;
+    height: 100%;
+    background-color: rgb(6, 6, 59); 
+    z-index: 1;
+}
+
+.ad_space_right {
+    position: fixed;
+    top: 0; /* Position at the top of the viewport */
+    left: 1166px;
+    width: 143px;
+    height: 100%;
+    background-color: rgb(6, 6, 59);
+    z-index: 1;
+}
+
+.contact {
+    position: relative;
+    bottom: 0;
+    left: 1105px;
+    color: blue;
+    z-index: 1;
+}
+
+.copyright {
+    position: relative;
+    bottom: 0;
+    left: 490px;
+    color: black;
+    z-index: 1;
+}
+
 fieldset {
     margin: 90px;
     max-width: 1000px;
+}
+
+.footer_right {
+    position: fixed;
+    bottom: 0;
+    left: 1166px;
+    width: 143px;
+    height: 79px;
+    background-color: red;
+    z-index: 1;
+}
+
+.logo_fb {
+    position: fixed;
+    top: 48px;
+    left: 1070px;
+    z-index: 1;
+}
+
+.logo_potus_forum {
+    position: fixed;
+    top: 45px;
+    left: 136px;
+    z-index: 1;
+}
+
+.logo_yt {
+    position: fixed;
+    top: 43px;
+    left: 1121px;
+    z-index: 1;
+}
+
+.logo_potus_forum, .logo_fb, .logo_yt:hover {
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: 0; /* Position at the top of the viewport */
+    left: 136px;
+    width: 1030px;
+    height: 45px;
+    background-color: rgb(6, 6, 59);
+    z-index: 1;
 }
 
 .pie_chart {
@@ -19,7 +107,7 @@ fieldset {
 
 .radio_button+*::before {
     content: "";
-    display: inline-block; 
+    display: inline-block;
     vertical-align: bottom;
     width: .91rem;
     height: .91rem;
@@ -40,7 +128,7 @@ fieldset {
 }
 
 .radio_button_div {
-    position: relative; 
+    position: relative;
     top: -15px;
 }
 
@@ -48,7 +136,7 @@ fieldset {
     color: white;
     background-color: rgb(244, 4, 4);
     font-weight: 850;
-    border: none;  
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 3px 0 rgba(0, 0, 0, 0.2); /* Add a shadow to create the raised effect */
@@ -66,37 +154,60 @@ fieldset {
     transform: translateY(1.5px); /* Move the button down when clicked */
 }
 
+.title_part_forum {
+    position: fixed;
+    top: 20px;
+    left: 251px;
+    color: red;
+    z-index: 1;
+}
+
+.title_part_potus {
+    position: fixed;
+    top: 20px;
+    left: 136px;
+    color: red;
+    z-index: 1;
+}
+
+.top_section {
+    position: fixed;
+    top: 45px;
+    left: 136px;
+    width: 1030px;
+    height: 60px;
+    background-color: rgb(6, 6, 59);
+    z-index: 1;
+}
+
 .vote_count {
     position: relative;
     top: -240px;
-    left: 670px; 
+    left: 670px;
     font-size: medium;
 }
 
 .voted_msg {
-    font-size: 19px; 
-    position: relative; 
-    top: -8px; 
+    font-size: 19px;
+    position: relative;
+    top: -8px;
     left: 1px;
 }
 
 /* Styles for smaller screens (e.g., tablets and phones) */
 @media (max-width: 768px) {
     fieldset {
-        margin: 30px;
-        /* Reduce margin for smaller screens */
+        margin: 30px; /* Reduce margin for smaller screens */
     }
 
     .pie_chart {
-        width: 100%;
-        /* Make the pie chart container full width */
+        width: 100%; /* Make the pie chart container full width */
     }
 
     .vote_count {
         position: relative;
         top: 0;
         left: 0;
-        font-size: small;
-        /* Adjust font size for smaller screens */
+        font-size: small; /* Adjust font size for smaller screens */
     }
 }
