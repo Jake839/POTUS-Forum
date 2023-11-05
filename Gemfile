@@ -69,6 +69,7 @@ group :development do
   gem 'byebug'
   gem 'pry-rails'
   gem 'chartkick'
+  gem 'jquery-rails' #Added per ChatGPT, 11/4/23
 end
 
 group :test do

@@ -11,6 +11,7 @@ class ChoicesController < ApplicationController
                 @choice.add_vote
                 voted_questions << @choice.question.id
                 session[session_token] = voted_questions
+                session[:voted_question_id] = @choice.question.id #log the question the user votes for
             end
         end
 

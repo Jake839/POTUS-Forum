@@ -4,3 +4,4 @@
 //= link_tree ../../../vendor/javascript .js
 //= link chartkick.js
 //= link Chart.bundle.js
+//= link jquery3.js

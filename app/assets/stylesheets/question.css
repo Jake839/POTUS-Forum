@@ -9,26 +9,27 @@
 .ad_space_left {
     position: fixed;
     top: 0; /* Position at the top of the viewport */
-    width: 128px;
+    width: 138px;
     height: 100%;
-    background-color: rgb(6, 6, 59); 
+    background-color: rgb(6, 6, 59);
     z-index: 1;
 }
 
 .ad_space_right {
     position: fixed;
     top: 0; /* Position at the top of the viewport */
-    left: 1166px;
-    width: 143px;
+    left: 1287px;
+    width: 100%;
     height: 100%;
     background-color: rgb(6, 6, 59);
     z-index: 1;
+    
 }
 
 .contact {
     position: relative;
     bottom: 0;
-    left: 1105px;
+    left: 1228px;
     color: blue;
     z-index: 1;
 }
@@ -36,14 +37,14 @@
 .copyright {
     position: relative;
     bottom: 0;
-    left: 490px;
+    left: 546px;
     color: black;
     z-index: 1;
 }
 
 fieldset {
-    margin: 90px;
-    max-width: 1000px;
+    margin: 100px;
+    max-width: 1110px;
 }
 
 .footer_right {
@@ -59,21 +60,21 @@ fieldset {
 .logo_fb {
     position: fixed;
     top: 48px;
-    left: 1070px;
+    left: 1189px;
     z-index: 1;
 }
 
 .logo_potus_forum {
     position: fixed;
     top: 45px;
-    left: 136px;
+    left: 146px;
     z-index: 1;
 }
 
 .logo_yt {
     position: fixed;
     top: 43px;
-    left: 1121px;
+    left: 1241px;
     z-index: 1;
 }
 
@@ -84,10 +85,10 @@ fieldset {
 .menu {
     position: fixed;
     top: 0; /* Position at the top of the viewport */
-    left: 136px;
-    width: 1030px;
+    left: 146px;
+    width: 1141px;
     height: 45px;
-    background-color: rgb(6, 6, 59);
+    background-color: rgb(6, 6, 59); 
     z-index: 1;
 }
 
@@ -103,7 +104,6 @@ fieldset {
 .radio_button {
     display: none;
 }
-
 
 .radio_button+*::before {
     content: "";
@@ -173,10 +173,10 @@ fieldset {
 .top_section {
     position: fixed;
     top: 45px;
-    left: 136px;
-    width: 1030px;
+    left: 146px;
+    width: 1141px;
     height: 60px;
-    background-color: rgb(6, 6, 59);
+    background-color: rgb(6, 6, 59); 
     z-index: 1;
 }
 

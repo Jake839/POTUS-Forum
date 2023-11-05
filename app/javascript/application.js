@@ -9,6 +9,8 @@ import "Chart.bundle"
 //Globally disable Turbo for forms 
 Turbo.setFormMode("off")
 
+//= require jquery3 Added per ChatGPT 11/4/23
+
 //Prevent user from voting for a question without selecting a choice. Added per ChatGPT 11/2/23. 
 document.addEventListener('DOMContentLoaded', function () {
     const voteForms = document.querySelectorAll('[data-question-id]');
@@ -26,5 +28,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//Scroll to question user votes on 
+document.addEventListener("DOMContentLoaded", function () {
+    var votedQuestionId = document.querySelector("#selected-question").getAttribute("data-voted-question-id");
 
-
+    if (votedQuestionId) {
+        // Scroll to the selected question's anchor or perform any other action
+        $('html, body').animate({
+            scrollTop: $(`#question_${votedQuestionId}`).offset().top - 110
+        }, 1000); // Adjust the duration as needed
+    }
+});

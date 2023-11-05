@@ -1,51 +1,56 @@
 <head>
     <%= stylesheet_link_tag 'question' %>
+    <%= javascript_include_tag 'application' %> <!-- Added per ChatGPT 11/4/23 -->
 </head>
 
 <!-- set the presenter -->
 <% presenter = QuestionPresenter.new(question) %>
 
-<fieldset>
-    <legend><%= presenter.question_date %></legend>
+<div id="question_<%= question.id %>">
+    <fieldset id="selected-question" data-question-id="<%= question.id %>" data-voted-question-id="<%= session[:voted_question_id] || "" %>">
+        <legend><%= presenter.question_date %></legend>
 
-    <!-- Question -->
-    <div class="question">
-        <h2><%= presenter.question_description %></h2>
-    </div>
-
-    <!-- Choices Data -->
-    <% session_token = session[:user_token] %>
-    <% if session_token && session[session_token].include?(question.id) %>
-        <!-- vote results chart -->
-        <div class="pie_chart">
-            <%= pie_chart presenter.chart_data, colors: presenter.choice_colors, title: "Percent of Votes" %>
-            <%= image_tag("Vote Icon.png", size: "30x30") %> 
-            <b class="voted_msg">Voted!</b>
+        <!-- Question -->
+        <div class="question">
+            <h2><%= presenter.question_description %></h2>
         </div>
-        <!-- vote count data -->
-        <div class="vote_count">
-            <b><%= "Vote Count" %></b>
-            <br>
-            <% presenter.choice_votes.each do |choice_vote_data| %>
-                <span style="color: <%= choice_vote_data[2] %>;">
-                    <%= "#{choice_vote_data[0]} - #{choice_vote_data[1].to_s} " %>
-                    <%= choice_vote_data[1] == 1 ? "vote" : "votes" %>
-                </span>
+
+        <% session_token = session[:user_token] %>
+        <% if session_token && session[session_token].include?(question.id) %>
+            <!-- vote results chart -->
+            <div class="pie_chart">
+                <%= pie_chart presenter.chart_data, colors: presenter.choice_colors, title: "Percent of Votes" %>
+                <%= image_tag("Vote Icon.png", size: "30x30") %> 
+                <b class="voted_msg">Voted!</b>
+            </div>
+            <!-- vote count data -->
+            <div class="vote_count">
+                <b><%= "Vote Count" %></b>
                 <br>
+                <% presenter.choice_votes.each do |choice_vote_data| %>
+                    <span style="color: <%= choice_vote_data[2] %>;">
+                        <%= "#{choice_vote_data[0]} - #{choice_vote_data[1].to_s} " %>
+                        <%= choice_vote_data[1] == 1 ? "vote" : "votes" %>
+                    </span>
+                    <br>
+                <% end %>
+                <i><%= "Total - #{presenter.total_votes}" %> <%= presenter.total_votes == 1 ? "vote" : "votes" %></i>
+            </div>
+        <% else %>
+            <!-- poll -->
+            <%= form_for :question, as: :choice_id, url: question_choice_url(question, :choice_id), method: :patch do |f| %>
+                <% presenter.choices_for_question_prompt.each do |choice| %>
+                    <label>
+                        <div class="radio_button_div">
+                            <%= f.radio_button :choice_id, choice.id, :class => "radio_button" %>       
+                            <span><%= choice.name %></span>
+                        </div>
+                    </label>
+                <% end %>
+                <%= f.submit "Vote!", :class => "submit_button" %>
             <% end %>
-            <i><%= "Total - #{presenter.total_votes}" %> <%= presenter.total_votes == 1 ? "vote" : "votes" %></i>
-        </div>
-    <% else %>
-        <%= form_for :question, as: :choice_id, url: question_choice_url(question, :choice_id), method: :patch, data: { question_id: question.id } do |f| %>
-            <% presenter.choices_for_question_prompt.each do |choice| %>
-                <label>
-                    <div class="radio_button_div">
-                        <%= f.radio_button :choice_id, choice.id, :class => "radio_button" %>      
-                        <span><%= choice.name %></span>
-                    </div>
-                </label>
-            <% end %>
-            <%= f.submit "Vote!", :class => "submit_button" %>
         <% end %>
-    <% end %>
-</fieldset>
+    </fieldset>
+<div>
+
+

@@ -19,9 +19,9 @@
 </div>
 <br>
 
-<ul>
-    <%= render @questions %>
-</ul>
+<% @questions.each do |question| %>
+    <ul><%= render partial: 'question', locals: { question: question } %></ul>
+<% end %>
 
 <a href="mailto:hello@potusforum.com"><span class="contact"><%= "Contact" %></span></a>
 <span class="copyright"><%= "© Copyright 2023 POTUS Forum" %></span>

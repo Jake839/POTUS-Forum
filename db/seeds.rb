@@ -10,9 +10,12 @@ require 'open-uri' #for active storage
 
 puts "Loading Questions..."
 Question.destroy_all 
-question1 = Question.create(description: "Will Donald Trump be elected president in 2024?", date_string: "Monday, October 2nd, 2023", numerical_date: 1022023)
-question2 = Question.create(description: "Who should be Donald Trump's running mate?", date_string: "Tuesday, October 3rd, 2023", numerical_date: 1032023)
-question3 = Question.create(description: "Is Joe Biden a good president?", date_string: "Wednesday, October 4th, 2023", numerical_date: 1042023)
+question1 = Question.create(description: "Will Donald Trump be elected president in 2024?", date_string: "Monday, October 2nd, 2023", numerical_date: 10022023)
+question2 = Question.create(description: "Who should be Donald Trump's running mate?", date_string: "Tuesday, October 3rd, 2023", numerical_date: 10032023)
+question3 = Question.create(description: "Is Joe Biden a good president?", date_string: "Wednesday, October 4th, 2023", numerical_date: 10042023)
+question4 = Question.create(description: "Should Joe Biden resign?", date_string: "Thursday, October 5th, 2023", numerical_date: 10052023)
+question5 = Question.create(description: "Do the Presidents today follow the Constitution?", date_string: "Friday, October 6th, 2023", numerical_date: 10062023)
+
 
 puts "Loading Choices..."
 Choice.destroy_all 
@@ -27,6 +30,12 @@ choice6 = Choice.create(name: "Sarah Palin", votes: 0, bar_color: "red", questio
 #Question 3 Choices
 choice7 = Choice.create(name: "Yes", votes: 0, bar_color: "#1226BA", question_id: question3.id)
 choice8 = Choice.create(name: "No", votes: 0, bar_color: "#D40C1C", question_id: question3.id)
+#Question 4 Choices
+choice9 = Choice.create(name: "Yes", votes: 0, bar_color: "#D40C1C", question_id: question4.id)
+choice10 = Choice.create(name: "No", votes: 0, bar_color: "#1226BA", question_id: question4.id)
+#Question 5 Choices
+choice11 = Choice.create(name: "Yes", votes: 0, bar_color: "#D40C1C", question_id: question5.id)
+choice12 = Choice.create(name: "No", votes: 0, bar_color: "#1226BA", question_id: question5.id)
 
 
 
