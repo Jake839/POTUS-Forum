@@ -23,7 +23,7 @@ Choice.destroy_all
 choice1 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question1.id)
 choice2 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question1.id)
 #Question 2 Choices
-choice3 = Choice.create(name: "Kari Lake", bar_color: "#16CDDA", votes: 0, question_id: question2.id)
+choice3 = Choice.create(name: "Kari Lake", color: "#16CDDA", votes: 0, question_id: question2.id)
 choice4 = Choice.create(name: "Marjorie Taylor Greene", color: "blue", votes: 0, question_id: question2.id)
 choice5 = Choice.create(name: "Sarah Huckabee Sanders", color: "orange", votes: 0, question_id: question2.id)
 choice6 = Choice.create(name: "Sarah Palin", votes: 0, color: "red", question_id: question2.id)
