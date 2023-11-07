@@ -8,7 +8,8 @@
 #  votes       :integer          not null
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  bar_color   :string           not null
+#  color       :string           not null
+#
 
 class Choice < ApplicationRecord 
     validates :name, :question_id, :votes, presence: true 

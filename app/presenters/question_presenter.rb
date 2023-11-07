@@ -20,7 +20,7 @@ class QuestionPresenter
     end 
 
     def choice_colors 
-        choices_by_vote_count.map(&:bar_color)
+        choices_by_vote_count.map(&:color)
     end 
 
     def chart_data 
@@ -28,7 +28,7 @@ class QuestionPresenter
     end  
 
     def choice_votes 
-        choices_by_vote_count.map { |choice| [choice.name, choice.votes, choice.bar_color] }
+        choices_by_vote_count.map { |choice| [choice.name, choice.votes, choice.color] }
     end 
 
     def total_votes
