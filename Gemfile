@@ -68,8 +68,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'byebug'
   gem 'pry-rails'
-  #gem 'jquery-rails', '~> 4.6.0'
-  #gem 'jquery-rails' #Added per ChatGPT, 11/4/23
 end
 
 group :test do
