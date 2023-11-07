@@ -20,22 +20,22 @@ question5 = Question.create(description: "Do the Presidents today follow the Con
 puts "Loading Choices..."
 Choice.destroy_all 
 #Question 1 Choices
-choice1 = Choice.create(name: "Yes", votes: 0, bar_color: "#D40C1C", question_id: question1.id)
-choice2 = Choice.create(name: "No", votes: 0, bar_color: "#1226BA", question_id: question1.id)
+choice1 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question1.id)
+choice2 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question1.id)
 #Question 2 Choices
 choice3 = Choice.create(name: "Kari Lake", bar_color: "#16CDDA", votes: 0, question_id: question2.id)
-choice4 = Choice.create(name: "Marjorie Taylor Greene", bar_color: "blue", votes: 0, question_id: question2.id)
-choice5 = Choice.create(name: "Sarah Huckabee Sanders", bar_color: "orange", votes: 0, question_id: question2.id)
-choice6 = Choice.create(name: "Sarah Palin", votes: 0, bar_color: "red", question_id: question2.id)
+choice4 = Choice.create(name: "Marjorie Taylor Greene", color: "blue", votes: 0, question_id: question2.id)
+choice5 = Choice.create(name: "Sarah Huckabee Sanders", color: "orange", votes: 0, question_id: question2.id)
+choice6 = Choice.create(name: "Sarah Palin", votes: 0, color: "red", question_id: question2.id)
 #Question 3 Choices
-choice7 = Choice.create(name: "Yes", votes: 0, bar_color: "#1226BA", question_id: question3.id)
-choice8 = Choice.create(name: "No", votes: 0, bar_color: "#D40C1C", question_id: question3.id)
+choice7 = Choice.create(name: "Yes", votes: 0, color: "#1226BA", question_id: question3.id)
+choice8 = Choice.create(name: "No", votes: 0, color: "#D40C1C", question_id: question3.id)
 #Question 4 Choices
-choice9 = Choice.create(name: "Yes", votes: 0, bar_color: "#D40C1C", question_id: question4.id)
-choice10 = Choice.create(name: "No", votes: 0, bar_color: "#1226BA", question_id: question4.id)
+choice9 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question4.id)
+choice10 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question4.id)
 #Question 5 Choices
-choice11 = Choice.create(name: "Yes", votes: 0, bar_color: "#D40C1C", question_id: question5.id)
-choice12 = Choice.create(name: "No", votes: 0, bar_color: "#1226BA", question_id: question5.id)
+choice11 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question5.id)
+choice12 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question5.id)
 
 
 
