@@ -68,8 +68,8 @@ group :development do
   gem 'binding_of_caller'
   gem 'byebug'
   gem 'pry-rails'
-  gem 'chartkick'
-  gem 'jquery-rails' #Added per ChatGPT, 11/4/23
+  gem 'jquery-rails', '~> 4.6.0'
+  #gem 'jquery-rails' #Added per ChatGPT, 11/4/23
 end
 
 group :test do
@@ -77,9 +77,8 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
-  gem 'jquery-rails' #Added per ChatGPT, 11/4/23
 end
 
-group :production do 
+group :production, :development do 
   gem 'chartkick'
 end 

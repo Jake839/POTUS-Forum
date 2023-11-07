@@ -1,5 +1,3 @@
-//= require jquery3
-
 // Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
 import "@hotwired/turbo-rails"
 import "controllers"
@@ -10,6 +8,8 @@ import "Chart.bundle"
 
 //Globally disable Turbo for forms 
 Turbo.setFormMode("off")
+
+//= require jquery3
 
 //Prevent user from voting for a question without selecting a choice. Added per ChatGPT 11/2/23. 
 document.addEventListener('DOMContentLoaded', function () {
@@ -28,10 +28,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+
 //Scroll to question user votes on 
 document.addEventListener("DOMContentLoaded", function () {
     var votedQuestionId = document.querySelector("#selected-question").getAttribute("data-voted-question-id");
-
+    
     if (votedQuestionId) {
         // Scroll to the selected question's anchor or perform any other action
         $('html, body').animate({

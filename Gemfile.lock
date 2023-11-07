@@ -252,7 +252,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
-  jquery-rails
+  jquery-rails (~> 4.6.0)
   pg (~> 1.1)
   pry-rails
   puma (~> 5.0)
