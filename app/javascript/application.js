@@ -9,7 +9,7 @@ import "Chart.bundle"
 //Globally disable Turbo for forms 
 Turbo.setFormMode("off")
 
-//= require jquery
+//= require jquery3
 
 //Prevent user from voting for a question without selecting a choice. Added per ChatGPT 11/2/23. 
 document.addEventListener('DOMContentLoaded', function () {
