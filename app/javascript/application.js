@@ -29,12 +29,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
 //Scroll to question user votes on 
 document.addEventListener("DOMContentLoaded", function () {
     var votedQuestionId = document.querySelector("#selected-question").getAttribute("data-voted-question-id");
-    
-    if (votedQuestionId) {
+    var scrollParameter = new URLSearchParams(window.location.search).get("scroll_to_top");
+
+    if (scrollParameter === "true") {
+        // Scroll to the top of the page
+        $('html, body').animate({ scrollTop: 0 }, 1000); // Adjust the duration as needed
+    } else if (votedQuestionId) {
         // Scroll to the selected question's anchor or perform any other action
         $('html, body').animate({
             scrollTop: $(`#question_${votedQuestionId}`).offset().top - 110
