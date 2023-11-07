@@ -77,4 +77,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'jquery-rails' #Added per ChatGPT, 11/4/23
 end
+
+group :production do 
+  gem 'chartkick'
+end 
