@@ -11,6 +11,7 @@ Turbo.setFormMode("off")
 
 //= require jquery3
 
+
 //Prevent user from voting for a question without selecting a choice. Added per ChatGPT 11/2/23. 
 document.addEventListener('DOMContentLoaded', function () {
     const voteForms = document.querySelectorAll('[data-question-id]');
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-//Scroll to question user votes on 
+//If user votes for question, scroll to that question. If user clicks POTUS Forum image at top, stay at page top. 
 document.addEventListener("DOMContentLoaded", function () {
     var votedQuestionId = document.querySelector("#selected-question").getAttribute("data-voted-question-id");
     var scrollParameter = new URLSearchParams(window.location.search).get("scroll_to_top");
