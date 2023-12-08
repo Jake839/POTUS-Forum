@@ -81,4 +81,5 @@ group :production, :development do
   gem 'chartkick'
   gem 'jquery-rails', '~> 4.6.0'
   gem 'rack-timeout'
+  gem 'newrelic_rpm'
 end 
