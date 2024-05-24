@@ -9,7 +9,7 @@
 require 'open-uri' #for active storage 
 
 puts "Loading Questions..."
-=begin 
+
 Question.destroy_all 
 question1 = Question.create(description: "Will Donald Trump be elected president in 2024?", date_string: "Monday, October 2nd, 2023", numerical_date: 10022023)
 question2 = Question.create(description: "Who should be Donald Trump's running mate?", date_string: "Tuesday, October 3rd, 2023", numerical_date: 10032023)
@@ -17,7 +17,7 @@ question3 = Question.create(description: "Is Joe Biden a good president?", date_
 question4 = Question.create(description: "Should Joe Biden resign?", date_string: "Thursday, October 5th, 2023", numerical_date: 10052023)
 question5 = Question.create(description: "Do the Presidents today follow the Constitution?", date_string: "Friday, October 6th, 2023", numerical_date: 10062023)
 question6 = Question.create(description: "Will Donald Trump be convicted in court?", date_string: "Friday, October 7th, 2023", numerical_date: 10072023)
-=end 
+
 question7 = Question.create(description: "Is Joe Biden failing?", date_string: "Friday, October 8th, 2023", numerical_date: 10082023)
 
 if question7.persisted?
@@ -28,7 +28,7 @@ end
 
 
 puts "Loading Choices..."
-=begin 
+
 Choice.destroy_all 
 #Question 1 Choices
 choice1 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question1.id)
@@ -50,7 +50,7 @@ choice12 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: qu
 #Question 6 Choices
 choice13 = Choice.create(name: "Yes", votes: 0, color: "#1226BA", question_id: question6.id)
 choice14 = Choice.create(name: "No", votes: 0, color: "#D40C1C", question_id: question6.id)
-=end 
+
 #Question 7 Choices
 choice14 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question7.id)
 choice15 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question7.id)
