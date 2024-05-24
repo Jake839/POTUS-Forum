@@ -52,8 +52,8 @@ choice13 = Choice.create(name: "Yes", votes: 0, color: "#1226BA", question_id: q
 choice14 = Choice.create(name: "No", votes: 0, color: "#D40C1C", question_id: question6.id)
 =end 
 #Question 7 Choices
-choice13 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question7.id)
-choice14 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question7.id)
+choice14 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question7.id)
+choice15 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question7.id)
 
 
 
