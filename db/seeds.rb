@@ -20,6 +20,11 @@ question6 = Question.create(description: "Will Donald Trump be convicted in cour
 =end 
 question7 = Question.create(description: "Is Joe Biden failing?", date_string: "Friday, October 8th, 2023", numerical_date: 10082023)
 
+if question7.persisted?
+  puts "New question added. To view it, visit the following URL:"
+  puts "http://localhost:3000?new_question_id=#{question7.id}" if Rails.env.development?
+  puts "https://your-production-url.com?new_question_id=#{question7.id}" if Rails.env.production?
+end
 
 
 puts "Loading Choices..."
