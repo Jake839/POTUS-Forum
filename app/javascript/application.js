@@ -38,8 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Check if the session storage indicates that we need to scroll to the voted question
     var scrollToVotedQuestion = sessionStorage.getItem("scroll_to_voted_question");
 
-    debugger;
-
     if (scrollParameter === "true") {
         // Scroll to the top of the page
         $('html, body').animate({ scrollTop: 0 }, 1000); // Adjust the duration as needed
