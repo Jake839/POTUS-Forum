@@ -16,6 +16,5 @@ class ChoicesController < ApplicationController
         end 
 
         redirect_to questions_url
-        session[:voted_question_id] = nil
     end
 end 
