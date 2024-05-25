@@ -13,7 +13,8 @@ class ChoicesController < ApplicationController
                 session[session_token] = voted_questions
                 session[:voted_question_id] = @choice.question.id #log the question the user votes for
             end
-
+        end 
+        
         redirect_to questions_url
     end
 end 
