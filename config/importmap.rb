@@ -9,7 +9,3 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 #For chartkick.com
 pin "chartkick", to: "chartkick.js"
 pin "Chart.bundle", to: "Chart.bundle.js"
-
-
-
-

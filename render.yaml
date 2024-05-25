@@ -1,12 +1,12 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: potusforum
+    databaseName: potusforum
+    user: potusforum
     plan: free
 
 services:
   - type: web
-    name: mysite
+    name: potusforum
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
