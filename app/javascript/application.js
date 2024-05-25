@@ -47,6 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
             scrollTop: $(`#question_${votedQuestionId}`).offset().top - 110
          }, 1000); // Adjust the duration as needed
         // Clear the flag so it doesn't scroll again on the next reload
-        sessionStorage.removeItem("scroll_to_voted_question");
+    //    sessionStorage.removeItem("scroll_to_voted_question");
     }
 });
