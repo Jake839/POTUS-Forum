@@ -12,6 +12,7 @@ class ChoicesController < ApplicationController
                 voted_questions << @choice.question.id
                 session[session_token] = voted_questions
                 session[:voted_question_id] = @choice.question.id #log the question the user votes for
+                session[:scroll_to_voted_question] = true # Set the flag to scroll
             end
         end
 
