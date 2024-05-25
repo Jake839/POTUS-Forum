@@ -16,7 +16,7 @@
     <% if session[:scroll_to_voted_question] %>
       <% session[:scroll_to_voted_question] = nil %> 
       <script>
-        sessionStorage.setItem("scroll_to_voted_question", "false");
+        sessionStorage.setItem("scroll_to_voted_question", "true");
       </script>
     <% end %>                                                                                               
   </head>
