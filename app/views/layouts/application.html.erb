@@ -14,7 +14,7 @@
 
     <!-- Added per ChatGPT, 5/24/24 to account for only scrolling once to question user votes on --> 
     <% if session[:scroll_to_voted_question] %>
-      <% session[:scroll_to_voted_question] = nil %> 
+      <% session[:scroll_to_voted_question] = true %> 
       <script>
         sessionStorage.setItem("scroll_to_voted_question", "true");
       </script>
