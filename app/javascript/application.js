@@ -43,5 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
         $('html, body').animate({
             scrollTop: $(`#question_${votedQuestionId}`).offset().top - 110
         }, 1000); // Adjust the duration as needed
+        var votedQuestionId = null;
     }
 });
