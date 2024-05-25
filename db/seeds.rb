@@ -7,28 +7,36 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require 'open-uri' #for active storage 
-
+=begin 
 puts "Loading Questions..."
-
 Question.destroy_all 
 question1 = Question.create(description: "Will Donald Trump be elected president in 2024?", date_string: "Monday, October 2nd, 2023", numerical_date: 10022023)
 question2 = Question.create(description: "Who should be Donald Trump's running mate?", date_string: "Tuesday, October 3rd, 2023", numerical_date: 10032023)
 question3 = Question.create(description: "Is Joe Biden a good president?", date_string: "Wednesday, October 4th, 2023", numerical_date: 10042023)
 question4 = Question.create(description: "Should Joe Biden resign?", date_string: "Thursday, October 5th, 2023", numerical_date: 10052023)
 question5 = Question.create(description: "Do the Presidents today follow the Constitution?", date_string: "Friday, October 6th, 2023", numerical_date: 10062023)
-question6 = Question.create(description: "Will Donald Trump be convicted in court?", date_string: "Friday, October 7th, 2023", numerical_date: 10072023)
+question6 = Question.create(description: "Will Donald Trump be convicted in court?", date_string: "Saturday, October 7th, 2023", numerical_date: 10072023)
+question7 = Question.create(description: "Is Joe Biden failing?", date_string: "Sunday, October 8th, 2023", numerical_date: 10082023)
+question8 = Question.create(description: "Is Joe Biden on drugs?", date_string: "Monday, October 9th, 2023", numerical_date: 10092023)
+=end 
+question9 = Question.create(description: "Will Trump have a good VP?", date_string: "Tuesday, October 10th, 2023", numerical_date: 10102023)
 
-question7 = Question.create(description: "Is Joe Biden failing?", date_string: "Friday, October 8th, 2023", numerical_date: 10082023)
 
-if question7.persisted?
+if question9.persisted?
   puts "New question added. To view it, visit the following URL:"
-  puts "http://localhost:3000?new_question_id=#{question7.id}" if Rails.env.development?
-  puts "https://your-production-url.com?new_question_id=#{question7.id}" if Rails.env.production?
+  # Determine the base URL based on the environment
+  base_url = if Rails.env.development?
+               'http://localhost:3000'
+             elsif Rails.env.production?
+               'https://mysite-17yd.onrender.com'
+             end
+  # Output the complete URL
+  puts "#{base_url}?new_question_id=#{question9.id}" if base_url
 end
 
 
+=begin 
 puts "Loading Choices..."
-
 Choice.destroy_all 
 #Question 1 Choices
 choice1 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question1.id)
@@ -50,10 +58,17 @@ choice12 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: qu
 #Question 6 Choices
 choice13 = Choice.create(name: "Yes", votes: 0, color: "#1226BA", question_id: question6.id)
 choice14 = Choice.create(name: "No", votes: 0, color: "#D40C1C", question_id: question6.id)
-
 #Question 7 Choices
-choice14 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question7.id)
-choice15 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question7.id)
+choice15 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question7.id)
+choice16 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question7.id)
+#Question 8 Choices
+choice17 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question8.id)
+choice18 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question8.id)
+=end 
+#Question 9 Choices
+choice19 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question9.id)
+choice20 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question9.id)
+
 
 
 

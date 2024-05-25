@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 //If user votes for question, scroll to that question. If user clicks POTUS Forum image at top, stay at page top. 
 document.addEventListener("DOMContentLoaded", function () {
     var votedQuestionId = document.querySelector("#selected-question").getAttribute("data-voted-question-id");
@@ -41,9 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
         $('html, body').animate({ scrollTop: 0 }, 1000); // Adjust the duration as needed
     } else if (newQuestionId) {
         // Scroll to the new question
-        $('html, body').animate({
-            scrollTop: $(`#question_${newQuestionId}`).offset().top - 110
-        }, 1000); // Adjust the duration as needed
+        var newQuestionElement = document.getElementById(`question_${newQuestionId}`);
+        if (newQuestionElement) {
+            $('html, body').animate({
+                scrollTop: $(newQuestionElement).offset().top - 110
+            }, 1000); // Adjust the duration as needed
+            console.log(`Scrolled to question_${newQuestionId}`);
+        } else {
+            console.log(`Element with ID question_${newQuestionId} not found`);
+        }
     } else if (votedQuestionId) {
         // Scroll to the selected question's anchor or perform any other action
         $('html, body').animate({
