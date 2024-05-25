@@ -10,15 +10,7 @@
     <%= javascript_include_tag 'jquery3' %> <!-- Added per ChatGPT, 11/4/23 --> 
     <%= javascript_importmap_tags %>
     <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
-    <%= favicon_link_tag 'PF Logo.png' %>  
-
-    <!-- Added per ChatGPT, 5/24/24 to account for only scrolling once to question user votes on --> 
-    <% if session[:scroll_to_voted_question] %>
-      <% session[:scroll_to_voted_question] = true %> 
-      <script>
-        sessionStorage.setItem("scroll_to_voted_question", "true");
-      </script>
-    <% end %>                                                                                               
+    <%= favicon_link_tag 'PF Logo.png' %>                                                                                               
   </head>
 
   <body>
