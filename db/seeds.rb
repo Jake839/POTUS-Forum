@@ -7,7 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 require 'open-uri' #for active storage 
-=begin 
 puts "Loading Questions..."
 Question.destroy_all 
 question1 = Question.create(description: "Will Donald Trump be elected president in 2024?", date_string: "Monday, October 2nd, 2023", numerical_date: 10022023)
@@ -18,24 +17,9 @@ question5 = Question.create(description: "Do the Presidents today follow the Con
 question6 = Question.create(description: "Will Donald Trump be convicted in court?", date_string: "Saturday, October 7th, 2023", numerical_date: 10072023)
 question7 = Question.create(description: "Is Joe Biden failing?", date_string: "Sunday, October 8th, 2023", numerical_date: 10082023)
 question8 = Question.create(description: "Is Joe Biden on drugs?", date_string: "Monday, October 9th, 2023", numerical_date: 10092023)
-=end 
 question9 = Question.create(description: "Will Trump have a good VP?", date_string: "Tuesday, October 10th, 2023", numerical_date: 10102023)
 
 
-if question9.persisted?
-  puts "New question added. To view it, visit the following URL:"
-  # Determine the base URL based on the environment
-  base_url = if Rails.env.development?
-               'http://localhost:3000'
-             elsif Rails.env.production?
-               'https://mysite-17yd.onrender.com'
-             end
-  # Output the complete URL
-  puts "#{base_url}?new_question_id=#{question9.id}" if base_url
-end
-
-
-=begin 
 puts "Loading Choices..."
 Choice.destroy_all 
 #Question 1 Choices
@@ -63,8 +47,7 @@ choice15 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: q
 choice16 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question7.id)
 #Question 8 Choices
 choice17 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question8.id)
-choice18 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question8.id)
-=end 
+choice18 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question8.id) 
 #Question 9 Choices
 choice19 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question9.id)
 choice20 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question9.id)
