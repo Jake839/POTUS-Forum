@@ -1,3 +1,10 @@
+.logo_ig {
+    position: fixed;
+    top: 40px;
+    left: 700px;
+    z-index: 2;
+}
+
 .about {
     position: relative;
     bottom: 0;
@@ -65,7 +72,7 @@ fieldset {
 }
 
 .logo_potus_forum {
-    position: fixed;
+    position: fixed; 
     top: 45px;
     left: 146px;
     z-index: 1;
@@ -78,7 +85,7 @@ fieldset {
     z-index: 1;
 }
 
-.logo_potus_forum, .logo_fb, .logo_yt:hover {
+.logo_potus_forum, .logo_fb, .logo_ig, .logo_yt:hover {
     cursor: pointer;
 }
 
