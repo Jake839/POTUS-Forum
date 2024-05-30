@@ -228,21 +228,21 @@ fieldset {
         position: fixed;
         top: 154px;
         left: 92px;
-        z-index: 2;
+        z-index: 1;
     }
 
     .logo_x_mq {
         position: fixed;
-        top: 200px;
+        top: 202px;
         left: 92px;
-        z-index: 2;
+        z-index: 1;
     }
 
     .logo_yt_mq {
         position: fixed;
         top: 98px;
         left: 92px;
-        z-index: 2;
+        z-index: 1;
     }
 
     .pie_chart {
