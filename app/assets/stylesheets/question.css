@@ -231,16 +231,18 @@ fieldset {
         z-index: 1;
     }
 
+    /*
     .logo_ig_mq {
         position: fixed;
         top: 104px;
         left: 100px;
         z-index: 2;
     }
+    */
 
     .logo_x_mq {
         position: fixed;
-        top: 130px;
+        top: 104px;
         left: 100px;
         z-index: 2;
     }
