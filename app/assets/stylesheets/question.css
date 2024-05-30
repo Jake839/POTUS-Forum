@@ -226,24 +226,23 @@ fieldset {
 
     .logo_fb_mq {
         position: fixed;
-        top: 104px;
+        top: 144px;
         left: 100px;
         z-index: 2;
     }
-
 
     .logo_x_mq {
         position: fixed;
-        top: 134px;
+        top: 184px;
         left: 100px;
         z-index: 2;
     }
 
-    .logo_yt {
+    .logo_yt_mq {
         position: fixed;
-        top: 42px;
-        left: 433px;
-        z-index: 1;
+        top: 104px;
+        left: 100px;
+        z-index: 2;
     }
 
     .pie_chart {
