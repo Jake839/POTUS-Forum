@@ -231,6 +231,13 @@ fieldset {
         z-index: 1;
     }
 
+    .logo_ig {
+        position: fixed;
+        top: 48px;
+        left: 342px;
+        z-index: 2;
+    }
+
     .logo_yt {
         position: fixed;
         top: 42px;
