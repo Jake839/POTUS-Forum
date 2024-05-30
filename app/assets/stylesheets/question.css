@@ -205,7 +205,7 @@ fieldset {
 /* Styles for smaller screens (e.g., tablets and phones) */
 @media (max-width: 850px) {
     .menu {
-        width: 100%; 
+        width: 100%;
     }
 
     .contact {
@@ -244,6 +244,7 @@ fieldset {
         left: 433px;
         z-index: 1;
     }
+
     .pie_chart {
         width: 325px;
     }
