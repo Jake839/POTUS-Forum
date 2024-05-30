@@ -231,10 +231,10 @@ fieldset {
         z-index: 1;
     }
 
-    .logo_ig {
+    .logo_ig_mq {
         position: fixed;
         top: 48px;
-        left: 342px;
+        left: 0px;
         z-index: 2;
     }
 
