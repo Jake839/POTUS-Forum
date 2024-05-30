@@ -6,52 +6,20 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+
+#RED - #D40C1C"
+#BLUE - "#1226BA"
+
 require 'open-uri' #for active storage 
 puts "Loading Questions..."
 Question.destroy_all 
-question1 = Question.create(description: "Will Donald Trump be elected president in 2024?", date_string: "Monday, October 2nd, 2023", numerical_date: 10022023)
-question2 = Question.create(description: "Who should be Donald Trump's running mate?", date_string: "Tuesday, October 3rd, 2023", numerical_date: 10032023)
-question3 = Question.create(description: "Is Joe Biden a good president?", date_string: "Wednesday, October 4th, 2023", numerical_date: 10042023)
-question4 = Question.create(description: "Should Joe Biden resign?", date_string: "Thursday, October 5th, 2023", numerical_date: 10052023)
-question5 = Question.create(description: "Do the Presidents today follow the Constitution?", date_string: "Friday, October 6th, 2023", numerical_date: 10062023)
-question6 = Question.create(description: "Will Donald Trump be convicted in court?", date_string: "Saturday, October 7th, 2023", numerical_date: 10072023)
-question7 = Question.create(description: "Is Joe Biden failing?", date_string: "Sunday, October 8th, 2023", numerical_date: 10082023)
-question8 = Question.create(description: "Is Joe Biden on drugs?", date_string: "Monday, October 9th, 2023", numerical_date: 10092023)
-question9 = Question.create(description: "Will Trump have a good VP?", date_string: "Tuesday, October 10th, 2023", numerical_date: 10102023)
-question10 = Question.create(description: "Is it bad that Biden reads off a teleprompter?", date_string: "Wednesday, October 11th, 2023", numerical_date: 10112023)
+question1 = Question.create(description: "Who will win the 2024 election?", date_string: "Wednesday, May 29th, 2024", numerical_date: 05292024)
 
 
 puts "Loading Choices..."
 Choice.destroy_all 
 #Question 1 Choices
-choice1 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question1.id)
-choice2 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question1.id)
-#Question 2 Choices
-choice3 = Choice.create(name: "Kari Lake", color: "#16CDDA", votes: 0, question_id: question2.id)
-choice4 = Choice.create(name: "Marjorie Taylor Greene", color: "blue", votes: 0, question_id: question2.id)
-choice5 = Choice.create(name: "Sarah Huckabee Sanders", color: "orange", votes: 0, question_id: question2.id)
-choice6 = Choice.create(name: "Sarah Palin", votes: 0, color: "red", question_id: question2.id)
-#Question 3 Choices
-choice7 = Choice.create(name: "Yes", votes: 0, color: "#1226BA", question_id: question3.id)
-choice8 = Choice.create(name: "No", votes: 0, color: "#D40C1C", question_id: question3.id)
-#Question 4 Choices
-choice9 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question4.id)
-choice10 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question4.id)
-#Question 5 Choices
-choice11 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question5.id)
-choice12 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question5.id)
-#Question 6 Choices
-choice13 = Choice.create(name: "Yes", votes: 0, color: "#1226BA", question_id: question6.id)
-choice14 = Choice.create(name: "No", votes: 0, color: "#D40C1C", question_id: question6.id)
-#Question 7 Choices
-choice15 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question7.id)
-choice16 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question7.id)
-#Question 8 Choices
-choice17 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question8.id)
-choice18 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question8.id) 
-#Question 9 Choices
-choice19 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question9.id)
-choice20 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question9.id)
-#Question 10 Choices
-choice21 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question10.id)
-choice22 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question10.id)
+choice1 = Choice.create(name: "Donald Trump", votes: 0, color: "#D40C1C", question_id: question1.id)
+choice2 = Choice.create(name: "Joe Biden", votes: 0, color: "#1226BA", question_id: question1.id)
+choice3 = Choice.create(name: "Robert F. Kennedy Jr.", votes: 0, color: "#F45F10", question_id: question1.id)
+choice4 = Choice.create(name: "Golden the cat", votes: 0, color: "#FFCB1F", question_id: question1.id)
