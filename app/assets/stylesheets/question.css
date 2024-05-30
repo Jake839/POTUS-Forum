@@ -85,7 +85,7 @@ fieldset {
     z-index: 1;
 }
 
-.logo_potus_forum, .logo_fb, .logo_ig, .logo_yt:hover {
+.logo_potus_forum, .logo_fb, .logo_ig_mq, .logo_x_mq, .logo_yt:hover {
     cursor: pointer;
 }
 
@@ -234,6 +234,13 @@ fieldset {
     .logo_ig_mq {
         position: fixed;
         top: 104px;
+        left: 100px;
+        z-index: 2;
+    }
+
+    .logo_x_mq {
+        position: fixed;
+        top: 130px;
         left: 100px;
         z-index: 2;
     }
