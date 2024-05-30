@@ -233,8 +233,8 @@ fieldset {
 
     .logo_ig_mq {
         position: fixed;
-        top: 130px;
-        left: 300px;
+        top: 100px;
+        left: 100px;
         z-index: 2;
     }
 
