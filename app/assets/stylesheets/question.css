@@ -226,22 +226,22 @@ fieldset {
 
     .logo_fb_mq {
         position: fixed;
-        top: 144px;
+        top: 164px;
         left: 100px;
         z-index: 2;
     }
 
     .logo_x_mq {
         position: fixed;
-        top: 184px;
+        top: 204px;
         left: 100px;
         z-index: 2;
     }
 
     .logo_yt_mq {
         position: fixed;
-        top: 104px;
-        left: 100px;
+        top: 101px;
+        left: 97px;
         z-index: 2;
     }
 
