@@ -224,13 +224,6 @@ fieldset {
         z-index: 1;
     }
 
-    .logo_fb {
-        position: fixed;
-        top: 48px;
-        left: 394px;
-        z-index: 1;
-    }
-
     .logo_fb_mq {
         position: fixed;
         top: 104px;
@@ -238,14 +231,6 @@ fieldset {
         z-index: 2;
     }
 
-    /*
-    .logo_ig_mq {
-        position: fixed;
-        top: 104px;
-        left: 100px;
-        z-index: 2;
-    }
-    */
 
     .logo_x_mq {
         position: fixed;
