@@ -233,14 +233,14 @@ fieldset {
 
     .logo_x_mq {
         position: fixed;
-        top: 204px;
+        top: 210px;
         left: 92px;
         z-index: 2;
     }
 
     .logo_yt_mq {
         position: fixed;
-        top: 99px;
+        top: 98px;
         left: 92px;
         z-index: 2;
     }
