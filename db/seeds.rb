@@ -12,11 +12,13 @@
 
 require 'open-uri' #for active storage 
 puts "Loading Questions..."
+
 Question.destroy_all 
-question1 = Question.create(description: "Who will win the 2024 election?", date_string: "Wednesday, May 29th, 2024", numerical_date: 5292024)
+question1 = Question.create(description: "Who will win the 2024 election?", date_string: "Thursday, May 30th, 2024", numerical_date: 5302024)
 
 
 puts "Loading Choices..."
+
 Choice.destroy_all 
 #Question 1 Choices
 choice1 = Choice.create(name: "Donald Trump", votes: 0, color: "#D40C1C", question_id: question1.id)
