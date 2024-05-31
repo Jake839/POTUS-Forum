@@ -1,10 +1,3 @@
-.logo_ig {
-    position: fixed;
-    top: 40px;
-    left: 700px;
-    z-index: 2;
-}
-
 .about {
     position: relative;
     bottom: 0;
@@ -71,21 +64,7 @@ fieldset {
     z-index: 1;
 }
 
-.logo_potus_forum {
-    position: fixed; 
-    top: 45px;
-    left: 146px;
-    z-index: 1;
-}
-
-.logo_yt {
-    position: fixed;
-    top: 43px;
-    left: 1241px;
-    z-index: 1;
-}
-
-.logo_potus_forum, .logo_fb, .logo_ig_mq, .logo_x_mq, .logo_yt:hover {
+.logo_potus_forum, .logo_fb, .logo_x, .logo_yt:hover {
     cursor: pointer;
 }
 
@@ -221,27 +200,6 @@ fieldset {
         bottom: 0;
         left: 86px;
         color: black;
-        z-index: 1;
-    }
-
-    .logo_fb_mq {
-        position: fixed;
-        top: 154px;
-        left: 92px;
-        z-index: 1;
-    }
-
-    .logo_x_mq {
-        position: fixed;
-        top: 202px;
-        left: 92px;
-        z-index: 1;
-    }
-
-    .logo_yt_mq {
-        position: fixed;
-        top: 98px;
-        left: 92px;
         z-index: 1;
     }
 
