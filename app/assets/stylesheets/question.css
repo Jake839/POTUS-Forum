@@ -57,13 +57,6 @@ fieldset {
     z-index: 1;
 }
 
-.logo_fb {
-    position: fixed;
-    top: 48px;
-    left: 1189px;
-    z-index: 1;
-}
-
 .logo_potus_forum, .logo_fb, .logo_x, .logo_yt:hover {
     cursor: pointer;
 }
