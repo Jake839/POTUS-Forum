@@ -28,5 +28,5 @@ choice3 = Choice.create(name: "Robert F. Kennedy Jr.", votes: 0, color: "#F45F10
 choice4 = Choice.create(name: "Golden the cat", votes: 0, color: "#FFCB1F", question_id: question1.id)
 =end 
 #Question 2 Choices
-choice5 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question1.id)
-choice6 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question1.id)
+choice5 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question2.id)
+choice6 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question2.id)
