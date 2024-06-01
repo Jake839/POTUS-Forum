@@ -12,21 +12,18 @@
 
 require 'open-uri' #for active storage 
 puts "Loading Questions..."
-=begin 
 Question.destroy_all 
 question1 = Question.create(description: "Who will win the 2024 election?", date_string: "Thursday, May 30th, 2024", numerical_date: 5302024)
-=end 
 question2 = Question.create(description: "Donald Trump is a convicted felon. He was found guilty on 34 counts of falsifying business records in the first degree. Was his trial rigged?", date_string: "Friday, May 31st, 2024", numerical_date: 5312024)
 
+
 puts "Loading Choices..."
-=begin 
 Choice.destroy_all 
 #Question 1 Choices
 choice1 = Choice.create(name: "Donald Trump", votes: 0, color: "#D40C1C", question_id: question1.id)
 choice2 = Choice.create(name: "Joe Biden", votes: 0, color: "#1226BA", question_id: question1.id)
 choice3 = Choice.create(name: "Robert F. Kennedy Jr.", votes: 0, color: "#F45F10", question_id: question1.id)
 choice4 = Choice.create(name: "Golden the cat", votes: 0, color: "#FFCB1F", question_id: question1.id)
-=end 
 #Question 2 Choices
 choice5 = Choice.create(name: "Yes", votes: 0, color: "#D40C1C", question_id: question2.id)
 choice6 = Choice.create(name: "No", votes: 0, color: "#1226BA", question_id: question2.id)
