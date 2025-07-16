@@ -25,7 +25,8 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
-gem "jbuilder"
+gem "jbuilder", ">= 2.12.0" #Added per ChatGPT 7/16/25 
+# gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -50,7 +51,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  # gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 
 group :development do
@@ -67,7 +68,12 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'byebug'
-  gem 'pry-rails'
+
+  #4 below gems added per ChatGPT 7/16/25
+  gem 'pry'
+  gem 'pry-byebug', '~> 3.10', '>= 3.10.1'
+  gem 'pry-stack_explorer'
+  gem "debug", "~> 1.7"
 end
 
 group :test do
